@@ -1,0 +1,18 @@
+CREATE DATABASE IF NOT EXISTS customer_db;
+USE customer_db;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(100) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE customers (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100),
+  phone VARCHAR(15),
+  address TEXT,
+  pincode VARCHAR(10),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
